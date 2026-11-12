@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ninja Strike - 3D Prototype</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main id="game">
+    <div id="hud">
+      <div class="hud-card">
+        <span>生命</span>
+        <strong id="health">100</strong>
+      </div>
+      <div class="hud-card">
+        <span>敵人</span>
+        <strong id="enemies">0</strong>
+      </div>
+      <div class="hud-card ammo">
+        <span>彈藥</span>
+        <strong id="ammo">12 / 12</strong>
+      </div>
+      <div class="hud-card score">
+        <span>分數</span>
+        <strong id="score">0</strong>
+      </div>
+    </div>
+    <div id="crosshair" aria-hidden="true"></div>
+    <div id="message">
+      <h1>NINJA STRIKE</h1>
+      <p>軍事基地戰鬥原型</p>
+      <button id="start-button">開始任務</button>
+      <small>WASD 移動 · 滑鼠瞄準 · 左鍵射擊 · R 重新裝填 · Esc 暫停</small>
+    </div>
+    <div id="hit-marker" aria-hidden="true">×</div>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
